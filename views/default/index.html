@@ -1,0 +1,147 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+<script>
+    var checklists_url = "{{=URL('api', 'get_checklists', user_signature=True, hash_vars=False)}}";
+    var checklists_public_url = "{{=URL('api', 'get_checklists_public')}}";
+    //var checklists_url_public = "{{=URL('api', 'get_checklists_public')}}";
+    var add_memo_url = "{{=URL('api', 'add_memo', user_signature=True)}}";
+    var del_memo_url = "{{=URL('api', 'del_memo', user_signature=True)}}";
+    var toggle_memo_url = "{{=URL('api', 'toggle_memo', user_signature=True)}}";
+    var edit_memo_url = "{{=URL('api', 'edit_memo', user_signature=True)}}";
+
+</script>
+{{end}}
+
+<div class="main_content">
+    <div id="vue-div" class="display:none">
+        <!-- Your code goes here.  Remember to call $("#vue-div").show() once you get the data for the first time. -->
+
+
+        <p v-if="!logged_in">
+            Please log in to create memos. Publically visible memos are displayed below.
+            ${get_checklists_public()}
+        </p>
+
+        <!-- Form to add memos -->
+        <div v-if="is_adding_memo" id="add_memo_div">
+            <form action="#" v-on:submit.prevent class="form-horizontal" enctype="multipart/form-data" method="post">
+
+                <div class="form-group" id="add_memo_title_div">
+                    <div>
+                        <input class="form-control string" id="add_memo_title_input" name="title" type="text"
+                               v-model="form_title" placeholder="Title"/>
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+                <div class="form-group" id="add_memo_content_div">
+                    <div>
+                        <input class="form-control string" id="add_memo_content_input" name="memo" type="text"
+                               v-model="form_memo" placeholder="Memo"/>
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button_bar">
+            <button v-if="!is_adding_memo" class="btn"
+                    v-on:click="add_memo_button()"
+                    :disabled="!logged_in"
+                    v-bind:class="{'disabled': !logged_in}">
+                <i class="fa fa-plus"></i> Add Memo
+            </button>
+            <button v-if="is_adding_memo" class="btn red" v-on:click="add_memo()">
+                <i class="fa fa-plus"></i> Add
+            </button>
+            <button v-if="is_adding_memo" class="btn " v-on:click="cancel_add_memo()">
+                <i class="fa fa-times"></i> Cancel
+            </button>
+        </div>
+
+
+        <!-- display memos -->
+
+        <ul>
+            <li v-for="checklist in checklists">
+                <!-- IF IT'S BEING EDITED!!!!!!!!!!!!!!!!! -->
+                <div v-if="checklist.being_edited">
+                    <form action="#" v-on:submit.prevent class="form-horizontal" enctype="multipart/form-data"
+                          method="post">
+
+                        <div class="form-group" id="edit_memo_title_div">
+                            <div>
+                                <input class="form-control string" id="edit_memo_title_input" name="title" type="text"
+                                       v-model="form_title_edit"/>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit_memo_content_div">
+                            <div>
+                                <input class="form-control string" id="edit_memo_content_input" name="memo" type="text"
+                                       v-model="form_memo_edit"/>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div>
+                        <div class="button_list">
+                            <div class="buttons">
+                                <a class="btn rounded" v-on:click="save_edit_memo(checklist._idx)">
+                                    <i class="fa fa-edit"></i>Save Edit
+                                </a>
+                                <a class="btn rounded" v-on:click="cancel_edit_memo(checklist._idx)">
+                                    <i class="fa fa-times"></i>Cancel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div v-else>
+                    <!-- display MAIN CONTENT of the memo -->
+                    ~~~~~
+                    <h6> ${checklist.title} </h6>
+                    <p> ${checklist.memo} </p>
+
+                    <div>
+                        <div class="button_list">
+                            <div class="buttons">
+                                <div v-if="checklist.user_email == current_user">
+                                    <a class="btn rounded" v-on:click="start_edit_memo(checklist._idx)">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+
+                                    <a class="btn rounded" v-if="checklist.is_public"
+                                       v-on:click="toggle_memo(checklist._idx)">
+                                        <i class="fa fa-users"></i>
+                                    </a>
+                                    <a class="btn rounded" v-else v-on:click="toggle_memo(checklist._idx)">
+                                        <i class="fa fa-user"></i>
+                                    </a>
+
+                                    <a class="btn rounded red" v-on:click="delete_memo(checklist._idx)">
+
+                                        <i class="fa fa-trash fa-lg"></i>
+                                    </a>
+                                </div>
+                                <div v-else>
+                                    <i class="fa fa-users"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- END V-ELSE -->
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>

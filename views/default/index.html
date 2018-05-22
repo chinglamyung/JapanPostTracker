@@ -21,7 +21,7 @@
 
 
         <p v-if="!logged_in">
-            Please log in to create memos. Publically visible memos are displayed below.
+            Please log in to create tracking entries.
             ${get_checklists_public()}
         </p>
 
@@ -32,14 +32,14 @@
                 <div class="form-group" id="add_memo_title_div">
                     <div>
                         <input class="form-control string" id="add_memo_title_input" name="title" type="text"
-                               v-model="form_title" placeholder="Title"/>
+                               v-model="form_title" placeholder="Description"/>
                         <span class="help-block"></span>
                     </div>
                 </div>
                 <div class="form-group" id="add_memo_content_div">
                     <div>
                         <input class="form-control string" id="add_memo_content_input" name="memo" type="text"
-                               v-model="form_memo" placeholder="Memo"/>
+                               v-model="form_memo" placeholder="Tracking Number"/>
                         <span class="help-block"></span>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                     v-on:click="add_memo_button()"
                     :disabled="!logged_in"
                     v-bind:class="{'disabled': !logged_in}">
-                <i class="fa fa-plus"></i> Add Memo
+                <i class="fa fa-plus"></i> Add Tracking Entry
             </button>
             <button v-if="is_adding_memo" class="btn red" v-on:click="add_memo()">
                 <i class="fa fa-plus"></i> Add
@@ -108,14 +108,17 @@
                     <h6> ${checklist.title} </h6>
                     <p> ${checklist.memo} </p>
 
+                    <!-- query and display tracking progress here -->
+
                     <div>
                         <div class="button_list">
                             <div class="buttons">
                                 <div v-if="checklist.user_email == current_user">
                                     <a class="btn rounded" v-on:click="start_edit_memo(checklist._idx)">
-                                        <i class="fa fa-edit"></i>
+                                        <i class="fa fa-edit"></i> edit entry
                                     </a>
 
+                                    <!-- No need for public memo buttons
                                     <a class="btn rounded" v-if="checklist.is_public"
                                        v-on:click="toggle_memo(checklist._idx)">
                                         <i class="fa fa-users"></i>
@@ -123,10 +126,20 @@
                                     <a class="btn rounded" v-else v-on:click="toggle_memo(checklist._idx)">
                                         <i class="fa fa-user"></i>
                                     </a>
+                                    -->
+
+                                    <a class="btn rounded">
+                                        check Japan Post
+                                    </a>
+                                    <!-- when v-on:click, they should open a new tab of JP or USPS website with the code
+                                    entered in the url -->
+                                    <a class="btn rounded">
+                                        check USPS
+                                    </a>
 
                                     <a class="btn rounded red" v-on:click="delete_memo(checklist._idx)">
 
-                                        <i class="fa fa-trash fa-lg"></i>
+                                        <i class="fa fa-trash fa-lg"></i> delete entry
                                     </a>
                                 </div>
                                 <div v-else>

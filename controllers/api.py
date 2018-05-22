@@ -1,6 +1,7 @@
 # Here go your api methods.
 import tempfile
 from gluon.utils import web2py_uuid
+import requests
 
 @auth.requires_signature(hash_vars=False)
 def get_checklists():

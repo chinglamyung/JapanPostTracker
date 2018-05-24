@@ -5,7 +5,7 @@ var app = function() {
     var self = {};
     Vue.config.silent = false; // show all warnings
 
-    // Extends an array
+    // Extends an array //I'm not sure where this would be useful but it's from HW3 and I don't think I used this func
     self.extend = function(a, b) {
         for (var i = 0; i < b.length; i++) {
             a.push(b[i]);
@@ -51,7 +51,6 @@ var app = function() {
     };
 
     self.delete_memo = function(memo_idx) {
-
         $.post(del_memo_url,
             { memo_id: self.vue.checklists[memo_idx].id },
             function () {
@@ -61,25 +60,15 @@ var app = function() {
         )
     };
 
-    self.toggle_memo = function(memo_idx) {
-
-        $.post(toggle_memo_url,
-            { memo_id: self.vue.checklists[memo_idx].id },
-            function () {
-                self.vue.checklists[memo_idx].is_public = !(self.vue.checklists[memo_idx].is_public);
-            }
-        )
-    };
-
     self.start_edit_memo = function(memo_idx) {
         self.vue.checklists[memo_idx].being_edited = true;
         self.vue.form_title_edit = self.vue.checklists[memo_idx].title;
         self.vue.form_memo_edit = self.vue.checklists[memo_idx].memo;
-    }
+    };
 
     self.cancel_edit_memo = function(memo_idx) {
         self.vue.checklists[memo_idx].being_edited = false;
-    }
+    };
 
     self.save_edit_memo = function(memo_idx) {
         $.post(edit_memo_url,
@@ -92,11 +81,18 @@ var app = function() {
                 self.vue.checklists[memo_idx].being_edited = false;
                 self.get_checklists(); //still 1-page app
             });
-    }
+    };
 
-    self.get_tracking_progress = function(memo_idx) {
-        return memo_idx;
-    }
+    self.get_tracking_progress_JP = function(memo_idx) {
+        $.getJSON(query_japan_post_url,
+            { // arguments to the server API
+                tracking_num: self.vue.checklists[memo_idx].memo
+            },
+            function(data) { //handler function for when server API returns
+                self.vue.checklists[memo_idx].info_japan_post = data.tracking_string;
+            }
+        )
+    };
 
 
     // Complete as needed.
@@ -122,16 +118,16 @@ var app = function() {
             add_memo: self.add_memo,
             cancel_add_memo: self.cancel_add_memo,
             delete_memo: self.delete_memo,
-            toggle_memo: self.toggle_memo,
+            //toggle_memo: self.toggle_memo,
             start_edit_memo: self.start_edit_memo,
             cancel_edit_memo: self.cancel_edit_memo,
             save_edit_memo: self.save_edit_memo,
-            get_tracking_progress: self.get_tracking_progress
+            get_tracking_progress_JP: self.get_tracking_progress_JP
         }
     });
 
 
-    //self.get_checklists();
+    //self.get_checklists(); //I will call this in index.html
     $("#vue-div").show();
 
     return self;

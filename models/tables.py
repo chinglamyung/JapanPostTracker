@@ -17,16 +17,16 @@ db.define_table('checklist',
                 Field('user_email', default=get_user_email()),
                 Field('title'),
                 Field('memo', 'text'),
-                Field('updated_on', 'datetime', update=datetime.datetime.utcnow()),
-                Field('is_public', 'boolean', default=False) # <-- IS_PUBLIC_FIELD_HERE
+                Field('updated_on', 'datetime', update=datetime.datetime.utcnow()) #,
+                #Field('is_public', 'boolean', default=False) # is_public field obsolete for this project
                 )
 
 db.checklist.user_email.writable = False
 db.checklist.user_email.readable = False
 db.checklist.updated_on.writable = db.checklist.updated_on.readable = False
 db.checklist.id.writable = db.checklist.id.readable = False
-db.checklist.is_public.readable = False
-db.checklist.is_public.writable = False
+#db.checklist.is_public.readable = False
+#db.checklist.is_public.writable = False
 
 
 # after defining tables, uncomment below to enable auditing

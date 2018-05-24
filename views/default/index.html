@@ -8,8 +8,8 @@
     var checklists_public_url = "{{=URL('api', 'get_checklists_public')}}";
     var add_memo_url = "{{=URL('api', 'add_memo', user_signature=True)}}";
     var del_memo_url = "{{=URL('api', 'del_memo', user_signature=True)}}";
-    var toggle_memo_url = "{{=URL('api', 'toggle_memo', user_signature=True)}}";
     var edit_memo_url = "{{=URL('api', 'edit_memo', user_signature=True)}}";
+    var query_japan_post_url = "{{=URL('api', 'query_Japan_Post')}}";
 
 </script>
 {{end}}
@@ -107,7 +107,8 @@
                     <p> ${checklist.memo} </p>
 
                     <!-- query and display tracking progress here -->
-                    <!-- ${get_tracking_progress(checklist._idx)} <!-- -->
+                    ${get_tracking_progress_JP(checklist._idx)} <!-- -->
+                    <p> ${checklist.info_japan_post}</p>
 
                     <div>
                         <div class="button_list">
@@ -130,8 +131,9 @@
                                     <a class="btn rounded">
                                         check Japan Post
                                     </a>
-                                    <!-- when v-on:click, they should open a new tab of JP or USPS website with the code
-                                    entered in the url -->
+                                    <!-- TYLER: -->
+                                    <!-- when v-on:click, they should open a new tab of JP or USPS website with the
+                                    tracking code entered in the url -->
                                     <a class="btn rounded">
                                         check USPS
                                     </a>

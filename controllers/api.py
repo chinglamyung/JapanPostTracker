@@ -2,6 +2,7 @@
 import tempfile
 from gluon.utils import web2py_uuid
 import requests
+import requests
 
 @auth.requires_signature(hash_vars=False)
 def get_checklists():
@@ -19,9 +20,10 @@ def get_checklists():
                 user_email = r.user_email,
                 title = r.title,
                 memo = r.memo,
-                is_public = r.is_public,
                 updated_on = r.updated_on,
-                being_edited = False
+                being_edited = False,
+                info_japan_post = None,
+                info_USPS = None
             )
             checklists.append(t)
 
@@ -31,6 +33,16 @@ def get_checklists():
         logged_in=logged_in,
         current_user=auth.user.email
     ))
+
+def query_Japan_Post():
+    tracking_string = request.vars.tracking_num
+    logger.info("tracking number to look up is %r", tracking_string)
+    tracking_string = tracking_string + " appended extra_stuff_here_for_testing"
+
+    return response.json(dict(
+        tracking_string = tracking_string
+    ))
+
 
 def get_checklists_public():
     checklists = []

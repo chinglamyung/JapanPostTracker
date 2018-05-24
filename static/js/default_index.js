@@ -17,7 +17,7 @@ var app = function() {
 
     //self.insertion_id = null; // Initialization.
 
-    function get_checklists_url() {
+    function get_checklists_url() { //for now this function is pretty much redundant
         return checklists_url;
     }
 
@@ -103,7 +103,10 @@ var app = function() {
                 self.vue.checklists[memo_idx].being_edited = false;
                 self.get_checklists(); //still 1-page app
             });
+    }
 
+    self.get_tracking_progress = function(memo_idx) {
+        return memo_idx;
     }
 
 
@@ -114,7 +117,7 @@ var app = function() {
         unsafeDelimiters: ['!{', '}'],
         data: {
             logged_in: false,
-            current_user: null,
+            current_user: null,  //for discerning between public memos that are editable.
             is_adding_memo: false,
             form_title: null,
             form_memo: null,
@@ -129,12 +132,13 @@ var app = function() {
             add_memo_button: self.add_memo_button,
             add_memo: self.add_memo,
             cancel_add_memo: self.cancel_add_memo,
-            add_memo_url: self.add_memo_url,
+            //add_memo_url: self.add_memo_url, //hm I don't think this line is needed
             delete_memo: self.delete_memo,
             toggle_memo: self.toggle_memo,
             start_edit_memo: self.start_edit_memo,
             cancel_edit_memo: self.cancel_edit_memo,
-            save_edit_memo: self.save_edit_memo
+            save_edit_memo: self.save_edit_memo,
+            get_tracking_progress: self.get_tracking_progress
         }
     });
 

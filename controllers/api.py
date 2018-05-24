@@ -6,15 +6,13 @@ import requests
 @auth.requires_signature(hash_vars=False)
 def get_checklists():
     checklists = []
+    rows = None
     #logger.info("auth.user is %r", auth.user)
     if auth.user is not None:
-        rows = db((db.checklist.user_email == auth.user.email) | (db.checklist.is_public == True)).select()
-    else:
-        rows = db(db.checklist.is_public == True).select()
+        rows = db(db.checklist.user_email == auth.user.email).select()
 
     #logger.info("database rows: %r", rows)
     for i, r in enumerate(rows):
-
             #logger.info("row title retrieving %r", r.title)
             t = dict(
                 id=r.id,

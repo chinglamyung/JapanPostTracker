@@ -6,7 +6,6 @@
 <script>
     var checklists_url = "{{=URL('api', 'get_checklists', user_signature=True, hash_vars=False)}}";
     var checklists_public_url = "{{=URL('api', 'get_checklists_public')}}";
-    //var checklists_url_public = "{{=URL('api', 'get_checklists_public')}}";
     var add_memo_url = "{{=URL('api', 'add_memo', user_signature=True)}}";
     var del_memo_url = "{{=URL('api', 'del_memo', user_signature=True)}}";
     var toggle_memo_url = "{{=URL('api', 'toggle_memo', user_signature=True)}}";
@@ -19,10 +18,9 @@
     <div id="vue-div" class="display:none">
         <!-- Your code goes here.  Remember to call $("#vue-div").show() once you get the data for the first time. -->
 
-
+        ${get_checklists()}
         <p v-if="!logged_in">
             Please log in to create tracking entries.
-            ${get_checklists_public()}
         </p>
 
         <!-- Form to add memos -->

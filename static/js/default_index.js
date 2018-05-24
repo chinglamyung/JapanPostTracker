@@ -17,25 +17,14 @@ var app = function() {
 
     //self.insertion_id = null; // Initialization.
 
-    function get_checklists_url() { //for now this function is pretty much redundant
-        return checklists_url;
-    }
-
     self.get_checklists = function () {
-        $.getJSON(get_checklists_url(), function (data) {
+        $.getJSON(checklists_url, function (data) {
             self.vue.checklists = data.checklists;
             self.vue.logged_in = data.logged_in;
             self.vue.current_user = data.current_user;
             enumerate(self.vue.checklists);
         })
     };
-
-    self.get_checklists_public = function() {
-        $.getJSON(checklists_public_url, function (data) {
-            self.vue.checklists = data.checklists;
-            enumerate(self.vue.checklists);
-        })
-    }
 
     self.add_memo_button = function () {
         // The button to add a memo has been pressed.
@@ -128,11 +117,10 @@ var app = function() {
 
         },
         methods: {
-            get_checklists_public: self.get_checklists_public(),
+            get_checklists: self.get_checklists(),
             add_memo_button: self.add_memo_button,
             add_memo: self.add_memo,
             cancel_add_memo: self.cancel_add_memo,
-            //add_memo_url: self.add_memo_url, //hm I don't think this line is needed
             delete_memo: self.delete_memo,
             toggle_memo: self.toggle_memo,
             start_edit_memo: self.start_edit_memo,
@@ -143,7 +131,7 @@ var app = function() {
     });
 
 
-    self.get_checklists();
+    //self.get_checklists();
     $("#vue-div").show();
 
     return self;

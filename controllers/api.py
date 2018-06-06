@@ -2,30 +2,30 @@
 import tempfile
 from gluon.utils import web2py_uuid
 import requests
-import requests
+
 
 @auth.requires_signature(hash_vars=False)
 def get_checklists():
     checklists = []
     rows = None
-    #logger.info("auth.user is %r", auth.user)
+    # logger.info("auth.user is %r", auth.user)
     if auth.user is not None:
         rows = db(db.checklist.user_email == auth.user.email).select()
 
-    #logger.info("database rows: %r", rows)
+    # logger.info("database rows: %r", rows)
     for i, r in enumerate(rows):
-            #logger.info("row title retrieving %r", r.title)
-            t = dict(
-                id=r.id,
-                user_email = r.user_email,
-                title = r.title,
-                memo = r.memo,
-                updated_on = r.updated_on,
-                being_edited = False,
-                info_japan_post = None,
-                info_USPS = None
-            )
-            checklists.append(t)
+        # logger.info("row title retrieving %r", r.title)
+        t = dict(
+            id=r.id,
+            user_email=r.user_email,
+            title=r.title,
+            memo=r.memo,
+            updated_on=r.updated_on,
+            being_edited=False,
+            info_japan_post=None,
+            info_USPS=None
+        )
+        checklists.append(t)
 
     logged_in = auth.user is not None
     return response.json(dict(
@@ -34,13 +34,20 @@ def get_checklists():
         current_user=auth.user.email
     ))
 
-def query_Japan_Post():
-    tracking_string = request.vars.tracking_num
-    logger.info("tracking number to look up is %r", tracking_string)
-    tracking_string = tracking_string + " appended extra_stuff_here_for_testing"
 
+def query_Japan_Post():
+    tracking_num_string = request.vars.tracking_num
+    tracking_num_string = tracking_num_string.replace(" ", "")  # remove all spaces
+    logger.info("tracking number to look up is %r", tracking_num_string)
+
+    tracking_url_string = "https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=" + tracking_num_string
+    # https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP
+
+    #try to get the webpage
+    JP_response = requests.get(tracking_url_string, timeout=5)
+    
     return response.json(dict(
-        tracking_string = tracking_string
+        tracking_string=JP_response.text
     ))
 
 
@@ -65,6 +72,7 @@ def get_checklists_public():
         checklists=checklists,
     ))
 
+
 @auth.requires_signature()
 def add_memo():
     # Inserts the memo information.
@@ -72,13 +80,13 @@ def add_memo():
     logger.info("title: %r", request.vars.title)
     logger.info("memo: %r", request.vars.memo)
     id = db.checklist.insert(
-        title = request.vars.title,
-        memo = request.vars.memo
+        title=request.vars.title,
+        memo=request.vars.memo
     )
     return response.json(dict(checklist=dict(
-        id = id,
-        title = request.vars.title,
-        memo = request.vars.memo
+        id=id,
+        title=request.vars.title,
+        memo=request.vars.memo
     )))
 
 
@@ -88,6 +96,7 @@ def del_memo():
     logger.info("Trying to delete %r", request.vars.memo_id)
     db(db.checklist.id == request.vars.memo_id).delete()
     return "ok"
+
 
 @auth.requires_signature()
 def toggle_memo():
@@ -99,6 +108,7 @@ def toggle_memo():
         logger.info('is public: %r' % newEntry)
         entry.update_record(is_public=newEntry)
     return "ok"
+
 
 @auth.requires_signature()
 def edit_memo():
@@ -112,6 +122,6 @@ def edit_memo():
     entry.update_record(memo=request.vars.memo)
 
     return response.json(dict(checklist=dict(
-        title = request.vars.title,
-        memo = request.vars.memo
+        title=request.vars.title,
+        memo=request.vars.memo
     )))

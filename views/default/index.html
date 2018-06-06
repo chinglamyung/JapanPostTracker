@@ -15,147 +15,147 @@
 {{end}}
 
 <div class="main_content">
-    <div id="vue-div" class="display:none">
-        <!-- Your code goes here.  Remember to call $("#vue-div").show() once you get the data for the first time. -->
-
-        ${get_checklists()}
-        <p v-if="!logged_in">
-            Please log in to create tracking entries.
-        </p>
-
-        <!-- Form to add memos -->
-        <div v-if="is_adding_memo" id="add_memo_div">
-            <form action="#" v-on:submit.prevent class="form-horizontal" enctype="multipart/form-data" method="post">
-
-                <div class="form-group" id="add_memo_title_div">
-                    <div>
-                        <input class="form-control string" id="add_memo_title_input" name="title" type="text"
-                               v-model="form_title" placeholder="Description"/>
-                        <span class="help-block"></span>
-                    </div>
-                </div>
-                <div class="form-group" id="add_memo_content_div">
-                    <div>
-                        <input class="form-control string" id="add_memo_content_input" name="memo" type="text"
-                               v-model="form_memo" placeholder="Tracking Number"/>
-                        <span class="help-block"></span>
-                    </div>
-                </div>
-            </form>
+  <div id="vue-div" class="display:none">
+    <!-- Your code goes here.  Remember to call $("#vue-div").show() once you get the data for the first time. -->
+    
+    ${get_checklists()}
+    <p v-if="!logged_in">
+      Please log in to create tracking entries.
+    </p>
+    
+    <!-- Form to add memos -->
+    <div v-if="is_adding_memo" id="add_memo_div">
+      <form action="#" v-on:submit.prevent class="form-horizontal" enctype="multipart/form-data" method="post">
+        
+        <div class="form-group" id="add_memo_title_div">
+          <div>
+            <input class="form-control string" id="add_memo_title_input" name="title" type="text"
+                   v-model="form_title" placeholder="Description"/>
+            <span class="help-block"></span>
+          </div>
         </div>
-
-        <!-- Buttons -->
-        <div class="button_bar">
-            <button v-if="!is_adding_memo" class="btn"
-                    v-on:click="add_memo_button()"
-                    :disabled="!logged_in"
-                    v-bind:class="{'disabled': !logged_in}">
-                <i class="fa fa-plus"></i> Add Tracking Entry
-            </button>
-            <button v-if="is_adding_memo" class="btn red" v-on:click="add_memo()">
-                <i class="fa fa-plus"></i> Add
-            </button>
-            <button v-if="is_adding_memo" class="btn " v-on:click="cancel_add_memo()">
-                <i class="fa fa-times"></i> Cancel
-            </button>
+        <div class="form-group" id="add_memo_content_div">
+          <div>
+            <input class="form-control string" id="add_memo_content_input" name="memo" type="text"
+                   v-model="form_memo" placeholder="Tracking Number"/>
+            <span class="help-block"></span>
+          </div>
         </div>
-
-
-        <!-- display memos -->
-
-        <ul>
-            <li v-for="checklist in checklists">
-                <!-- IF IT'S BEING EDITED!!!!!!!!!!!!!!!!! -->
-                <div v-if="checklist.being_edited">
-                    <form action="#" v-on:submit.prevent class="form-horizontal" enctype="multipart/form-data"
-                          method="post">
-
-                        <div class="form-group" id="edit_memo_title_div">
-                            <div>
-                                <input class="form-control string" id="edit_memo_title_input" name="title" type="text"
-                                       v-model="form_title_edit"/>
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-                        <div class="form-group" id="edit_memo_content_div">
-                            <div>
-                                <input class="form-control string" id="edit_memo_content_input" name="memo" type="text"
-                                       v-model="form_memo_edit"/>
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-                    </form>
-
-                    <div>
-                        <div class="button_list">
-                            <div class="buttons">
-                                <a class="btn rounded" v-on:click="save_edit_memo(checklist._idx)">
-                                    <i class="fa fa-edit"></i>Save Edit
-                                </a>
-                                <a class="btn rounded" v-on:click="cancel_edit_memo(checklist._idx)">
-                                    <i class="fa fa-times"></i>Cancel
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
+      </form>
+    </div>
+    
+    <!-- Buttons -->
+    <div class="button_bar">
+      <button v-if="!is_adding_memo" class="btn"
+              v-on:click="add_memo_button()"
+              :disabled="!logged_in"
+              v-bind:class="{'disabled': !logged_in}">
+        <i class="fa fa-plus"></i> Add Tracking Entry
+      </button>
+      <button v-if="is_adding_memo" class="btn red" v-on:click="add_memo()">
+        <i class="fa fa-plus"></i> Add
+      </button>
+      <button v-if="is_adding_memo" class="btn " v-on:click="cancel_add_memo()">
+        <i class="fa fa-times"></i> Cancel
+      </button>
+    </div>
+    
+    
+    <!-- display memos -->
+    
+    <ul>
+      <li v-for="checklist in checklists">
+        <!-- IF IT'S BEING EDITED!!!!!!!!!!!!!!!!! -->
+        <div v-if="checklist.being_edited">
+          <form action="#" v-on:submit.prevent class="form-horizontal" enctype="multipart/form-data"
+                method="post">
+            
+            <div class="form-group" id="edit_memo_title_div">
+              <div>
+                <input class="form-control string" id="edit_memo_title_input" name="title" type="text"
+                       v-model="form_title_edit"/>
+                <span class="help-block"></span>
+              </div>
+            </div>
+            <div class="form-group" id="edit_memo_content_div">
+              <div>
+                <input class="form-control string" id="edit_memo_content_input" name="memo" type="text"
+                       v-model="form_memo_edit"/>
+                <span class="help-block"></span>
+              </div>
+            </div>
+          </form>
+          
+          <div>
+            <div class="button_list">
+              <div class="buttons">
+                <a class="btn rounded" v-on:click="save_edit_memo(checklist._idx)">
+                  <i class="fa fa-edit"></i>Save Edit
+                </a>
+                <a class="btn rounded" v-on:click="cancel_edit_memo(checklist._idx)">
+                  <i class="fa fa-times"></i>Cancel
+                </a>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+        <div v-else>
+          <!-- display MAIN CONTENT of the memo -->
+          ~~~~~
+          <h6> ${checklist.title} </h6>
+          <p> ${checklist.memo} </p>
+          
+          <!-- query and display tracking progress here -->
+          ${get_tracking_progress_JP(checklist._idx)} <!-- -->
+          <p> ${checklist.info_japan_post}</p>
+          
+          <div>
+            <div class="button_list">
+              <div class="buttons">
+                <div v-if="checklist.user_email == current_user">
+                  <a class="btn rounded" v-on:click="start_edit_memo(checklist._idx)">
+                    <i class="fa fa-edit"></i> edit entry
+                  </a>
+                  
+                  <!-- No need for public memo buttons
+                  <a class="btn rounded" v-if="checklist.is_public"
+                     v-on:click="toggle_memo(checklist._idx)">
+                      <i class="fa fa-users"></i>
+                  </a>
+                  <a class="btn rounded" v-else v-on:click="toggle_memo(checklist._idx)">
+                      <i class="fa fa-user"></i>
+                  </a>
+                  -->
+                  
+                  <a class="btn rounded">
+                    check Japan Post
+                  </a>
+                  <!-- TYLER: -->
+                  <!-- when v-on:click, they should open a new tab of JP or USPS website with the
+                  tracking code entered in the url -->
+                  <a class="btn rounded">
+                    check USPS
+                  </a>
+                  
+                  <a class="btn rounded red" v-on:click="delete_memo(checklist._idx)">
+                    
+                    <i class="fa fa-trash fa-lg"></i> delete entry
+                  </a>
                 </div>
                 <div v-else>
-                    <!-- display MAIN CONTENT of the memo -->
-                    ~~~~~
-                    <h6> ${checklist.title} </h6>
-                    <p> ${checklist.memo} </p>
-
-                    <!-- query and display tracking progress here -->
-                    ${get_tracking_progress_JP(checklist._idx)} <!-- -->
-                    <p> ${checklist.info_japan_post}</p>
-
-                    <div>
-                        <div class="button_list">
-                            <div class="buttons">
-                                <div v-if="checklist.user_email == current_user">
-                                    <a class="btn rounded" v-on:click="start_edit_memo(checklist._idx)">
-                                        <i class="fa fa-edit"></i> edit entry
-                                    </a>
-
-                                    <!-- No need for public memo buttons
-                                    <a class="btn rounded" v-if="checklist.is_public"
-                                       v-on:click="toggle_memo(checklist._idx)">
-                                        <i class="fa fa-users"></i>
-                                    </a>
-                                    <a class="btn rounded" v-else v-on:click="toggle_memo(checklist._idx)">
-                                        <i class="fa fa-user"></i>
-                                    </a>
-                                    -->
-
-                                    <a class="btn rounded">
-                                        check Japan Post
-                                    </a>
-                                    <!-- TYLER: -->
-                                    <!-- when v-on:click, they should open a new tab of JP or USPS website with the
-                                    tracking code entered in the url -->
-                                    <a class="btn rounded">
-                                        check USPS
-                                    </a>
-
-                                    <a class="btn rounded red" v-on:click="delete_memo(checklist._idx)">
-
-                                        <i class="fa fa-trash fa-lg"></i> delete entry
-                                    </a>
-                                </div>
-                                <div v-else>
-                                    <i class="fa fa-users"></i>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- END V-ELSE -->
-            </li>
-        </ul>
-
-
-    </div>
-</div>
+                  <i class="fa fa-users"></i>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div> <!-- END V-ELSE (entry is not begin edited)-->
+      </li> <!-- END list entry for each memo -->
+    </ul> <!-- END for each memo -->
+  
+  
+  </div> <!-- END vue-div -->
+</div> <!-- END main content div -->
 
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>

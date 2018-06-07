@@ -107,8 +107,9 @@
           <p> ${checklist.memo} </p>
           
           <!-- query and display tracking progress here -->
-          ${get_tracking_progress_JP(checklist._idx)} <!-- -->
-          <p> ${checklist.info_japan_post}</p>
+          ${get_tracking_progress_JP(checklist._idx)}
+          <span v-html="checklist.info_japan_post"></span>  <!-- magical things happen in this line. -->
+          
           
           <div>
             <div class="button_list">
@@ -117,16 +118,6 @@
                   <a class="btn rounded" v-on:click="start_edit_memo(checklist._idx)">
                     <i class="fa fa-edit"></i> edit entry
                   </a>
-                  
-                  <!-- No need for public memo buttons
-                  <a class="btn rounded" v-if="checklist.is_public"
-                     v-on:click="toggle_memo(checklist._idx)">
-                      <i class="fa fa-users"></i>
-                  </a>
-                  <a class="btn rounded" v-else v-on:click="toggle_memo(checklist._idx)">
-                      <i class="fa fa-user"></i>
-                  </a>
-                  -->
                   
                   <a class="btn rounded">
                     check Japan Post

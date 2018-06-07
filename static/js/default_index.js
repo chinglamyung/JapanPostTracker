@@ -89,7 +89,7 @@ var app = function() {
                 tracking_num: self.vue.checklists[memo_idx].memo
             },
             function(data) { //handler function for when server API returns
-                self.vue.checklists[memo_idx].info_japan_post = data.tracking_string;
+                self.vue.checklists[memo_idx].info_japan_post = data.resp_body;
             }
         )
     };

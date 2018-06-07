@@ -2,6 +2,7 @@
 import tempfile
 from gluon.utils import web2py_uuid
 import requests
+#import codecs
 
 
 @auth.requires_signature(hash_vars=False)
@@ -45,9 +46,26 @@ def query_Japan_Post():
 
     #try to get the webpage
     JP_response = requests.get(tracking_url_string, timeout=5)
-    
+    resp_body = JP_response.text
+    resp_body = resp_body.encode('ascii','ignore') #convert from unicode to ascii
+    index_ref = resp_body.find("State occurrence date") #<--- TOKEN TO LOOK FOR TO INDICATE SUCCESSFULL QUERY
+    if index_ref < 0:
+        #an error has occured or package number invalid
+        resp_body = "Sorry, we can't find the tracking number info for this entry via Japan Post."
+        pass
+    else:
+        #splice the string into the table portion
+        #first splice the string from the <table> to end of string and save this as new string.
+        resp_body = resp_body[(index_ref-500):] #resp_body now contains an arbitrary num of characters before the reference
+        index_begin = resp_body.find("<table")
+        resp_body = resp_body[index_begin:]
+
+        # then, splice from the beginning of this new string until index of </table>
+        index_end = resp_body.find("</table>") + 8 #plus seven because </table> contains 8 characters
+        resp_body = resp_body[:index_end]
+
     return response.json(dict(
-        tracking_string=JP_response.text
+        resp_body=resp_body
     ))
 
 

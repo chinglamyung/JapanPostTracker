@@ -94,6 +94,29 @@ var app = function() {
         )
     };
 
+    self.check_JP = function(memo_idx) {
+        $.getJSON(check_JP_url,
+            { tracking_num: self.vue.checklists[memo_idx].memo },
+            function(data) {
+                var url1 = "https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=";
+                var url2 = data.tracking_num_string;
+                var url3 = url1.concat(url2); 
+                window.open(url3, '_blank');
+            }
+        )
+    };
+
+    self.check_USPS = function(memo_idx) {
+        $.getJSON(check_USPS_url,
+            { tracking_num: self.vue.checklists[memo_idx].memo },
+            function(data) {
+                var url1 = "https://tools.usps.com/go/TrackConfirmAction?tRef=fullpage&tLc=2&text28777=&tLabels=" 
+                var url2 = data.tracking_num_string;
+                var url3 = url1.concat(url2); 
+                window.open(url3, '_blank');
+            }
+        )
+    };
 
     // Complete as needed.
     self.vue = new Vue({
@@ -118,11 +141,12 @@ var app = function() {
             add_memo: self.add_memo,
             cancel_add_memo: self.cancel_add_memo,
             delete_memo: self.delete_memo,
-            //toggle_memo: self.toggle_memo,
             start_edit_memo: self.start_edit_memo,
             cancel_edit_memo: self.cancel_edit_memo,
             save_edit_memo: self.save_edit_memo,
-            get_tracking_progress_JP: self.get_tracking_progress_JP
+            get_tracking_progress_JP: self.get_tracking_progress_JP,
+            check_JP: self.check_JP,
+            check_USPS: self.check_USPS,
         }
     });
 

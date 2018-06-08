@@ -10,6 +10,8 @@
     var del_memo_url = "{{=URL('api', 'del_memo', user_signature=True)}}";
     var edit_memo_url = "{{=URL('api', 'edit_memo', user_signature=True)}}";
     var query_japan_post_url = "{{=URL('api', 'query_Japan_Post')}}";
+    var check_JP_url = "{{=URL('api', 'check_JP')}}";
+    var check_USPS_url = "{{=URL('api', 'check_USPS')}}";
 
 </script>
 {{end}}
@@ -119,18 +121,17 @@
                     <i class="fa fa-edit"></i> edit entry
                   </a>
                   
-                  <a class="btn rounded">
-                    check Japan Post
+                  <a class="btn rounded" v-on:click="check_JP(checklist._idx)">
+                    Check Japan Post
                   </a>
                   <!-- TYLER: -->
                   <!-- when v-on:click, they should open a new tab of JP or USPS website with the
                   tracking code entered in the url -->
-                  <a class="btn rounded">
-                    check USPS
+                  <a class="btn rounded" v-on:click="check_USPS(checklist._idx)">
+                    Check USPS
                   </a>
                   
                   <a class="btn rounded red" v-on:click="delete_memo(checklist._idx)">
-                    
                     <i class="fa fa-trash fa-lg"></i> delete entry
                   </a>
                 </div>

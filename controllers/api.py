@@ -35,6 +35,22 @@ def get_checklists():
         current_user=auth.user.email
     ))
 
+def check_USPS():
+    tracking_num_string = request.vars.tracking_num
+    tracking_num_string = tracking_num_string.replace(" ", "")  # remove all spaces
+    logger.info("tracking number to look up is %r", tracking_num_string)
+    return response.json(dict(
+        tracking_num_string = tracking_num_string,
+    ))
+
+def check_JP():
+    tracking_num_string = request.vars.tracking_num
+    tracking_num_string = tracking_num_string.replace(" ", "")  # remove all spaces
+    logger.info("tracking number to look up is %r", tracking_num_string)
+    return response.json(dict(
+        tracking_num_string = tracking_num_string,
+    ))
+
 
 def query_Japan_Post():
     tracking_num_string = request.vars.tracking_num
@@ -42,7 +58,6 @@ def query_Japan_Post():
     logger.info("tracking number to look up is %r", tracking_num_string)
 
     tracking_url_string = "https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=" + tracking_num_string
-    # https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP
 
     #try to get the webpage
     JP_response = requests.get(tracking_url_string, timeout=5)

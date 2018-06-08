@@ -3,6 +3,10 @@
   color: #bb8833;
 }
 
+div.main_content {
+  padding: 10px;
+}
+
 button:disabled {
   background-color: lightgray;
 }

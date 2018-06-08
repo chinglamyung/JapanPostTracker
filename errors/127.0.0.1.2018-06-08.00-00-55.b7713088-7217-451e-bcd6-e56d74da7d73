@@ -1,0 +1,736 @@
+(dp1
+S'output'
+p2
+S"<class 'requests.exceptions.ReadTimeout'> HTTPSConnectionPool(host='trackings.post.japanpost.jp', port=443): Read timed out. (read timeout=5)"
+p3
+sS'layer'
+p4
+S'C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\applications\\JapanPostTracker\\controllers/api.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 000000000AE29DB0, file "C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\applications\\JapanPostTracker\\controllers/api.py", line 2>'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__module__'
+p12
+S"'requests.exceptions'"
+p13
+sS'__getslice__'
+p14
+S"<method-wrapper '__getslice__' of ReadTimeout object>"
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of ReadTimeout object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of ReadTimeout object>'
+p19
+sS'__dict__'
+p20
+S"{'request': <PreparedRequest [GET]>, 'response': None}"
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of ReadTimeout object>'
+p23
+sS'__weakref__'
+p24
+S'None'
+p25
+sS'message'
+p26
+S'ReadTimeoutError("HTTPSConnectionPool(host=\'trac...\', port=443): Read timed out. (read timeout=5)",)'
+p27
+sS'__init__'
+p28
+S'<bound method ReadTimeout.__init__ of ReadTimeou...port=443): Read timed out. (read timeout=5)",),)>'
+p29
+sS'__setattr__'
+p30
+S"<method-wrapper '__setattr__' of ReadTimeout object>"
+p31
+sS'__reduce_ex__'
+p32
+S'<built-in method __reduce_ex__ of ReadTimeout object>'
+p33
+sS'__new__'
+p34
+S'<built-in method __new__ of type object>'
+p35
+sS'errno'
+p36
+S'None'
+p37
+sS'__format__'
+p38
+S'<built-in method __format__ of ReadTimeout object>'
+p39
+sS'__class__'
+p40
+S"<class 'requests.exceptions.ReadTimeout'>"
+p41
+sS'filename'
+p42
+S'None'
+p43
+sS'__doc__'
+p44
+S"'The server did not send any data in the allotted amount of time.'"
+p45
+sS'__getitem__'
+p46
+S"<method-wrapper '__getitem__' of ReadTimeout object>"
+p47
+sS'__setstate__'
+p48
+S'<built-in method __setstate__ of ReadTimeout object>'
+p49
+sS'__getattribute__'
+p50
+S"<method-wrapper '__getattribute__' of ReadTimeout object>"
+p51
+sS'args'
+p52
+S'(ReadTimeoutError("HTTPSConnectionPool(host=\'trac...\', port=443): Read timed out. (read timeout=5)",),)'
+p53
+sS'__subclasshook__'
+p54
+S'<built-in method __subclasshook__ of type object>'
+p55
+sS'response'
+p56
+S'None'
+p57
+sS'__unicode__'
+p58
+S'<built-in method __unicode__ of ReadTimeout object>'
+p59
+sS'request'
+p60
+S'<PreparedRequest [GET]>'
+p61
+sS'strerror'
+p62
+S'None'
+p63
+sS'__delattr__'
+p64
+S"<method-wrapper '__delattr__' of ReadTimeout object>"
+p65
+sS'__repr__'
+p66
+S"<method-wrapper '__repr__' of ReadTimeout object>"
+p67
+sS'__hash__'
+p68
+S"<method-wrapper '__hash__' of ReadTimeout object>"
+p69
+ssS'evalue'
+p70
+S"HTTPSConnectionPool(host='trackings.post.japanpost.jp', port=443): Read timed out. (read timeout=5)"
+p71
+sg60
+cgluon.html
+XML_unpickle
+p72
+(S's>`\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>JapanPostTracker</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>api</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-59b3ba30-c122-4f00-ab3c-c1d96a4dbdd9<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_japanposttracker</td><td style="vertical-align:top;">:</td><td><div>61:998b7c1d-46e8-43b7-972a-abe3d44dc5b8<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-67fe31e3-bced-40c6-a753-ae6b7cf980e3<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>application/json, text/javascript, */*; q=0.01</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,zh-TW;q=0.6,th;q=0.5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_admin=127.0.0.1-59b3ba30-c122-4f00-ab3c-c1d96a4dbdd9; session_id_welcome=127.0.0.1-67fe31e3-bced-40c6-a753-ae6b7cf980e3; session_id_japanposttracker=&quot;61:998b7c1d-46e8-43b7-972a-abe3d44dc5b8&quot;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/JapanPostTracker/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_REQUESTED_WITH</td><td style="vertical-align:top;">:</td><td><div>XMLHttpRequest</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/JapanPostTracker/api/query_Japan_Post</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div>tracking_num=CC+248+510+326+JP</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>50386</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>YURI-MANGA</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\Citrus\\\\Desktop\\\\CS183\\\\web2py\\\\applications\\\\JapanPostTracker\\\\&#x27;, &#x27;C:\\\\Users\\\\Citrus\\\\Desktop\\\\CS183\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\Citrus\\\\Desktop\\\\CS183\\\\web2py\\\\applications\\\\admin\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Citrus\\Desktop\\CS183\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x403e108: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;YURI-MANGA&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\Citrus\\\\Desktop\\\\CS183\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;JapanPostTracker&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Citrus\\Desktop\\CS183\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>application/json, text/javascript, */*; q=0.01</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,zh-TW;q=0.6,th;q=0.5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_admin=127.0.0.1-59b3ba30-c122-4f00-ab3c-c1d96a4dbdd9; session_id_welcome=127.0.0.1-67fe31e3-bced-40c6-a753-ae6b7cf980e3; session_id_japanposttracker=&quot;61:998b7c1d-46e8-43b7-972a-abe3d44dc5b8&quot;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/JapanPostTracker/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_requested_with</td><td style="vertical-align:top;">:</td><td><div>XMLHttpRequest</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>fe80::d1de:8373:ce66:848c%10</div></td></tr><tr><td><div>YURI-MANGA</div></td></tr><tr><td><div>YURI-MANGA.ucsc.edu</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>169.233.73.151</div></td></tr><tr><td><div>192.168.137.1</div></td></tr><tr><td><div>fe80::6cbc:d052:bc35:124e%18</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/JapanPostTracker/api/query_Japan_Post</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div>tracking_num=CC+248+510+326+JP</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>50386</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/JapanPostTracker/api/query_Japan_Post?tracking_num=CC+248+510+326+JP</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>YURI-MANGA</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Citrus\\Desktop\\CS183\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.16.1-stable+timestamp.2017.11.14.05.54.25</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x000000000276B150&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x0000000003FDBBE8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x000000000304FB10&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x000000000276B150&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x0000000003FDBBE8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x000000000304FB10&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\applications\\JapanPostTracker\\</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>query_Japan_Post</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\Citrus\\\\Desktop\\\\CS183\\\\web2py\\\\applications\\\\JapanPostTracker\\\\&#x27;, &#x27;C:\\\\Users\\\\Citrus\\\\Desktop\\\\CS183\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\Citrus\\\\Desktop\\\\CS183\\\\web2py\\\\applications\\\\admin\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Citrus\\Desktop\\CS183\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x403e108: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;YURI-MANGA&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\Citrus\\\\Desktop\\\\CS183\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;JapanPostTracker&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Citrus\\Desktop\\CS183\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>fe80::d1de:8373:ce66:848c%10</div></td></tr><tr><td><div>YURI-MANGA</div></td></tr><tr><td><div>YURI-MANGA.ucsc.edu</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>169.233.73.151</div></td></tr><tr><td><div>192.168.137.1</div></td></tr><tr><td><div>fe80::6cbc:d052:bc35:124e%18</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.16.1-stable+timestamp.2017.11.14.05.54.25</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 6, 8, 0, 0, 55, 355000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/JapanPostTracker/api/query_Japan_Post</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 6, 8, 7, 0, 55, 355000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x000000000B093A20&gt;</div></td></tr></table></div>'
+tRp73
+sS'frames'
+p74
+(lp75
+(dp76
+S'file'
+p77
+S'C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\gluon\\restricted.py'
+p78
+sS'dump'
+p79
+(dp80
+S'environment'
+p81
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p82
+sS'ccode'
+p83
+S'<code object <module> at 000000000AE29DB0, file ...ons\\JapanPostTracker\\controllers/api.py", line 2>'
+p84
+ssS'lnum'
+p85
+I219
+sS'lines'
+p86
+(dp87
+I214
+S'    if environment is None:'
+p88
+sI215
+S'        environment = {}'
+p89
+sI216
+S"    environment['__file__'] = layer"
+p90
+sI217
+S"    environment['__name__'] = '__restricted__'"
+p91
+sI218
+S'    try:'
+p92
+sI219
+S'        exec(ccode, environment)'
+p93
+sI220
+S'    except HTTP:'
+p94
+sI221
+S'        raise'
+p95
+sI222
+S'    except RestrictedError:'
+p96
+sI223
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p97
+ssS'call'
+p98
+S'(ccode=<code object <module> at 000000000AE29DB0, file ...ons\\JapanPostTracker\\controllers/api.py", line 2>, environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=r\'C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\applications\\JapanPostTracker\\controllers/api.py\', scode=<code object <module> at 000000000AE29DB0, file ...ons\\JapanPostTracker\\controllers/api.py", line 2>)'
+p99
+sS'func'
+p100
+S'restricted'
+p101
+sa(dp102
+g77
+S'C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\applications\\JapanPostTracker\\controllers\\api.py'
+p103
+sg79
+(dp104
+sg85
+I162
+sg86
+(dp105
+I160
+S'    )))'
+p106
+sI151
+S'    logger.info("new memo content: %r", request.vars.memo)'
+p107
+sI152
+S''
+sI153
+S'    entry = db(db.checklist.id == request.vars.memo_id).select().first()'
+p108
+sI154
+S'    entry.update_record(title=request.vars.title)'
+p109
+sI155
+S'    entry.update_record(memo=request.vars.memo)'
+p110
+sI156
+S''
+sI157
+S'    return response.json(dict(checklist=dict('
+p111
+sI158
+S'        title=request.vars.title,'
+p112
+sI159
+S'        memo=request.vars.memo'
+p113
+ssg98
+S'()'
+p114
+sg100
+S'<module>'
+p115
+sa(dp116
+g77
+S'C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\gluon\\globals.py'
+p117
+sg79
+(dp118
+S'self'
+p119
+S'undefined'
+p120
+sS'f'
+S'<function query_Japan_Post>'
+p121
+ssg85
+I419
+sg86
+(dp122
+I416
+S'        self.menu = []             # used by the default view layout'
+p123
+sI417
+S'        self.files = []            # used by web2py_ajax.html'
+p124
+sI418
+S'        self._vars = None'
+p125
+sI419
+S'        self._caller = lambda f: f()'
+p126
+sI420
+S'        self._view_environment = None'
+p127
+sI421
+S'        self._custom_commit = None'
+p128
+sI422
+S'        self._custom_rollback = None'
+p129
+sI423
+S"        self.generic_patterns = ['*']"
+p130
+sI414
+S"        self.flash = ''            # used by the default view layout"
+p131
+sI415
+S'        self.meta = Storage()      # used by web2py_ajax.html'
+p132
+ssg98
+S'(f=<function query_Japan_Post>)'
+p133
+sg100
+S'<lambda>'
+p134
+sa(dp135
+g77
+S'C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\applications\\JapanPostTracker\\controllers\\api.py'
+p136
+sg79
+(dp137
+S'requests.get'
+p138
+S'<function get>'
+p139
+sS'tracking_url_string'
+p140
+S"'https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP'"
+p141
+sS'timeout'
+p142
+g120
+sS'global requests'
+p143
+S"<module 'requests' from 'D:\\HDDprograms\\Anaconda...ython27\\lib\\site-packages\\requests\\__init__.pyc'>"
+p144
+sS'JP_response'
+p145
+g120
+ssg85
+I63
+sg86
+(dp146
+I64
+S'    resp_body = JP_response.text'
+p147
+sI65
+S"    resp_body = resp_body.encode('ascii','ignore') #convert from unicode to ascii"
+p148
+sI66
+S'    index_ref = resp_body.find("State occurrence date") #<--- TOKEN TO LOOK FOR TO INDICATE SUCCESSFULL QUERY'
+p149
+sI67
+S'    if index_ref < 0:'
+p150
+sI58
+S'    logger.info("tracking number to look up is %r", tracking_num_string)'
+p151
+sI59
+S''
+sI60
+S'    tracking_url_string = "https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=" + tracking_num_string'
+p152
+sI61
+S''
+sI62
+S'    #try to get the webpage'
+p153
+sI63
+S'    JP_response = requests.get(tracking_url_string, timeout=5)'
+p154
+ssg98
+S'()'
+p155
+sg100
+S'query_Japan_Post'
+p156
+sa(dp157
+g77
+S'D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\api.py'
+p158
+sg79
+(dp159
+S'global request'
+p160
+S'<function request>'
+p161
+sS'url'
+p162
+S"'https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP'"
+p163
+sS'params'
+p164
+S'None'
+p165
+sS'kwargs'
+p166
+S"{'allow_redirects': True, 'timeout': 5}"
+p167
+ssg85
+I72
+sg86
+(dp168
+I67
+S'    :return: :class:`Response <Response>` object'
+p169
+sI68
+S'    :rtype: requests.Response'
+p170
+sI69
+S'    """'
+p171
+sI70
+S''
+sI71
+S"    kwargs.setdefault('allow_redirects', True)"
+p172
+sI72
+S"    return request('get', url, params=params, **kwargs)"
+p173
+sI73
+S''
+sI74
+S''
+sI75
+S'def options(url, **kwargs):'
+p174
+sI76
+S'    r"""Sends an OPTIONS request.'
+p175
+ssg98
+S"(url='https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP', params=None, **kwargs={'allow_redirects': True, 'timeout': 5})"
+p176
+sg100
+S'get'
+p177
+sa(dp178
+g77
+S'D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\api.py'
+p179
+sg79
+(dp180
+S'url'
+p181
+S"'https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP'"
+p182
+sS'session'
+p183
+S'<requests.sessions.Session object>'
+p184
+sS'method'
+p185
+S"'get'"
+p186
+sS'session.request'
+p187
+S'<bound method Session.request of <requests.sessions.Session object>>'
+p188
+sS'kwargs'
+p189
+S"{'allow_redirects': True, 'params': None, 'timeout': 5}"
+p190
+ssg85
+I58
+sg86
+(dp191
+I53
+S''
+sI54
+S"    # By using the 'with' statement we are sure the session is closed, thus we"
+p192
+sI55
+S'    # avoid leaving sockets open which can trigger a ResourceWarning in some'
+p193
+sI56
+S'    # cases, and look like a memory leak in others.'
+p194
+sI57
+S'    with sessions.Session() as session:'
+p195
+sI58
+S'        return session.request(method=method, url=url, **kwargs)'
+p196
+sI59
+S''
+sI60
+S''
+sI61
+S'def get(url, params=None, **kwargs):'
+p197
+sI62
+S'    r"""Sends a GET request.'
+p198
+ssg98
+S"(method='get', url='https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP', **kwargs={'allow_redirects': True, 'params': None, 'timeout': 5})"
+p199
+sg100
+g60
+sa(dp200
+g77
+S'D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\sessions.py'
+p201
+sg79
+(dp202
+S'resp'
+p203
+g120
+sS'send_kwargs'
+p204
+S"{'allow_redirects': True, 'cert': None, 'proxies': OrderedDict(), 'stream': False, 'timeout': 5, 'verify': True}"
+p205
+sS'prep'
+p206
+S'<PreparedRequest [GET]>'
+p207
+sS'self'
+p208
+S'<requests.sessions.Session object>'
+p209
+sS'self.send'
+p210
+S'<bound method Session.send of <requests.sessions.Session object>>'
+p211
+ssg85
+I508
+sg86
+(dp212
+I512
+S'    def get(self, url, **kwargs):'
+p213
+sI503
+S'        send_kwargs = {'
+p214
+sI504
+S"            'timeout': timeout,"
+p215
+sI505
+S"            'allow_redirects': allow_redirects,"
+p216
+sI506
+S'        }'
+p217
+sI507
+S'        send_kwargs.update(settings)'
+p218
+sI508
+S'        resp = self.send(prep, **send_kwargs)'
+p219
+sI509
+S''
+sI510
+S'        return resp'
+p220
+sI511
+S''
+ssg98
+S"(self=<requests.sessions.Session object>, method='get', url='https://trackings.post.japanpost.jp/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP', params=None, data=None, headers=None, cookies=None, files=None, auth=None, timeout=5, allow_redirects=True, proxies={}, hooks=None, stream=None, verify=None, cert=None, json=None)"
+p221
+sg100
+g60
+sa(dp222
+g77
+S'D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\sessions.py'
+p223
+sg79
+(dp224
+S'request'
+p225
+S'<PreparedRequest [GET]>'
+p226
+sS'adapter'
+p227
+S'<requests.adapters.HTTPAdapter object>'
+p228
+sS'r'
+g120
+sS'adapter.send'
+p229
+S'<bound method HTTPAdapter.send of <requests.adapters.HTTPAdapter object>>'
+p230
+sS'kwargs'
+p231
+S"{'cert': None, 'proxies': OrderedDict(), 'stream': False, 'timeout': 5, 'verify': True}"
+p232
+ssg85
+I618
+sg86
+(dp233
+I613
+S''
+sI614
+S'        # Start time (approximately) of the request'
+p234
+sI615
+S'        start = preferred_clock()'
+p235
+sI616
+S''
+sI617
+S'        # Send the request'
+p236
+sI618
+S'        r = adapter.send(request, **kwargs)'
+p237
+sI619
+S''
+sI620
+S'        # Total elapsed time of the request (approximately)'
+p238
+sI621
+S'        elapsed = preferred_clock() - start'
+p239
+sI622
+S'        r.elapsed = timedelta(seconds=elapsed)'
+p240
+ssg98
+S"(self=<requests.sessions.Session object>, request=<PreparedRequest [GET]>, **kwargs={'cert': None, 'proxies': OrderedDict(), 'stream': False, 'timeout': 5, 'verify': True})"
+p241
+sg100
+S'send'
+p242
+sa(dp243
+g77
+S'D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\adapters.py'
+p244
+sg79
+(dp245
+S'request'
+p246
+S'<PreparedRequest [GET]>'
+p247
+sS'global ReadTimeout'
+p248
+S"<class 'requests.exceptions.ReadTimeout'>"
+p249
+sS'e'
+S'ReadTimeoutError("HTTPSConnectionPool(host=\'trac...\', port=443): Read timed out. (read timeout=5)",)'
+p250
+ssg85
+I521
+sg86
+(dp251
+I516
+S'        except (_SSLError, _HTTPError) as e:'
+p252
+sI517
+S'            if isinstance(e, _SSLError):'
+p253
+sI518
+S'                # This branch is for urllib3 versions earlier than v1.22'
+p254
+sI519
+S'                raise SSLError(e, request=request)'
+p255
+sI520
+S'            elif isinstance(e, ReadTimeoutError):'
+p256
+sI521
+S'                raise ReadTimeout(e, request=request)'
+p257
+sI522
+S'            else:'
+p258
+sI523
+S'                raise'
+p259
+sI524
+S''
+sI525
+S'        return self.build_response(request, resp)'
+p260
+ssg98
+S'(self=<requests.adapters.HTTPAdapter object>, request=<PreparedRequest [GET]>, stream=False, timeout=<urllib3.util.timeout.Timeout object>, verify=True, cert=None, proxies=OrderedDict())'
+p261
+sg100
+g242
+sasS'pyver'
+p262
+S'Python 2.7.14: D:\\HDDprograms\\Anaconda3\\envs\\python27\\python.exe (prefix: D:\\HDDprograms\\Anaconda3\\envs\\python27)'
+p263
+sS'session'
+p264
+g72
+(S's\xd3\x08\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">auth</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">expiration</td><td style="vertical-align:top;">:</td><td><div>3600</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">hmac_key</td><td style="vertical-align:top;">:</td><td><div>ef03eb4b-b767-4bf6-bdd5-2b5312614310</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_visit</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 6, 8, 0, 0, 55, 8000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remember_me</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">email</td><td style="vertical-align:top;">:</td><td><div>a@a.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">first_name</td><td style="vertical-align:top;">:</td><td><div>abc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">id</td><td style="vertical-align:top;">:</td><td><div>1L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_name</td><td style="vertical-align:top;">:</td><td><div>d</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_id</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">reset_password_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user_groups</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">1</td><td style="vertical-align:top;">:</td><td><div>user_1</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr></table></div>'
+tRp265
+sS'etype'
+p266
+S"<class 'requests.exceptions.ReadTimeout'>"
+p267
+sS'date'
+p268
+S'Fri Jun 08 00:01:01 2018'
+p269
+sg56
+g72
+(S's\xfa\x1d\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x000000000B07B490&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_japanposttracker</td><td style="vertical-align:top;">:</td><td><div>61:998b7c1d-46e8-43b7-972a-abe3d44dc5b8<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap3_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">logo</td><td style="vertical-align:top;">:</td><td><div><a class="navbar-brand" href="http://www.web2py.com/" id="web2py-logo"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Home</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/JapanPostTracker/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>My Sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^api/\\w+\\.py$</div></td></tr><tr><td><div>^api/query_Japan_Post/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_japanposttracker</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_db_record_id</td><td style="vertical-align:top;">:</td><td><div>61L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_db_table</td><td style="vertical-align:top;">:</td><td><div>&lt;Table web2py_session_JapanPostTracker (id, locked, client_ip, created_datetime, modified_datetime, unique_key, session_data)&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_db_unique_key</td><td style="vertical-align:top;">:</td><td><div>998b7c1d-46e8-43b7-972a-abe3d44dc5b8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>ca24bd4bb61d5aed55d20dc5aa5cf779</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>61:998b7c1d-46e8-43b7-972a-abe3d44dc5b8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_japanposttracker</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>JapanPostTracker</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>db</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">subtitle</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>Japanposttracker</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>api/query_Japan_Post.html</div></td></tr></table></div>'
+tRp270
+sS'locals'
+p271
+(dp272
+S'proxies'
+p273
+S'OrderedDict()'
+p274
+sS'e'
+S'ReadTimeoutError("HTTPSConnectionPool(host=\'trac...\', port=443): Read timed out. (read timeout=5)",)'
+p275
+sS'stream'
+p276
+S'False'
+p277
+sS'url'
+p278
+S"'/services/srv/search/direct?locale=en&reqCodeNo1=CC248510326JP'"
+p279
+sS'verify'
+p280
+S'True'
+p281
+sS'self'
+p282
+S'<requests.adapters.HTTPAdapter object>'
+p283
+sg60
+S'<PreparedRequest [GET]>'
+p284
+sS'cert'
+p285
+S'None'
+p286
+sS'timeout'
+p287
+S'<urllib3.util.timeout.Timeout object>'
+p288
+sS'chunked'
+p289
+g277
+sS'conn'
+p290
+S'<urllib3.connectionpool.HTTPSConnectionPool object>'
+p291
+sssS'traceback'
+p292
+S'Traceback (most recent call last):\n  File "C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\gluon\\restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\applications\\JapanPostTracker\\controllers/api.py", line 162, in <module>\n  File "C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\gluon\\globals.py", line 419, in <lambda>\n    self._caller = lambda f: f()\n  File "C:\\Users\\Citrus\\Desktop\\CS183\\web2py\\applications\\JapanPostTracker\\controllers/api.py", line 63, in query_Japan_Post\n    JP_response = requests.get(tracking_url_string, timeout=5)\n  File "D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\api.py", line 72, in get\n    return request(\'get\', url, params=params, **kwargs)\n  File "D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\api.py", line 58, in request\n    return session.request(method=method, url=url, **kwargs)\n  File "D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\sessions.py", line 508, in request\n    resp = self.send(prep, **send_kwargs)\n  File "D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\sessions.py", line 618, in send\n    r = adapter.send(request, **kwargs)\n  File "D:\\HDDprograms\\Anaconda3\\envs\\python27\\lib\\site-packages\\requests\\adapters.py", line 521, in send\n    raise ReadTimeout(e, request=request)\nReadTimeout: HTTPSConnectionPool(host=\'trackings.post.japanpost.jp\', port=443): Read timed out. (read timeout=5)\n'
+p293
+s.

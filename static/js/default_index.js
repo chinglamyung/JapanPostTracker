@@ -61,6 +61,7 @@ var app = function() {
     };
 
     self.start_edit_memo = function(memo_idx) {
+        self.vue.an_entry_is_being_edited = true;
         self.vue.checklists[memo_idx].being_edited = true;
         self.vue.form_title_edit = self.vue.checklists[memo_idx].title;
         self.vue.form_memo_edit = self.vue.checklists[memo_idx].memo;
@@ -68,6 +69,7 @@ var app = function() {
 
     self.cancel_edit_memo = function(memo_idx) {
         self.vue.checklists[memo_idx].being_edited = false;
+        self.vue.an_entry_is_being_edited = false;
     };
 
     self.save_edit_memo = function(memo_idx) {
@@ -79,6 +81,7 @@ var app = function() {
             },
             function (data) {
                 self.vue.checklists[memo_idx].being_edited = false;
+                self.vue.an_entry_is_being_edited = false;
                 self.get_checklists(); //still 1-page app
             });
     };
@@ -132,8 +135,8 @@ var app = function() {
             form_title_edit: null,
             form_memo_edit: null,
             checklists: [],
-            checklist: null
-
+            checklist: null,
+            an_entry_is_being_edited: false
         },
         methods: {
             get_checklists: self.get_checklists(),

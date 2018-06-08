@@ -5,7 +5,13 @@ import requests
 #import codecs
 
 
-@auth.requires_signature(hash_vars=False)
+def get_login_status():
+    logged_in = auth.user is not None
+    return response.json(dict(
+        logged_in=logged_in
+    ))
+
+@auth.requires_signature()
 def get_checklists():
     checklists = []
     rows = None

@@ -4,14 +4,14 @@
 
 <script src="{{=URL('static', 'js/vue.js')}}"></script>
 <script>
-    var checklists_url = "{{=URL('api', 'get_checklists', user_signature=True, hash_vars=False)}}";
+    var login_status_url = "{{=URL('api', 'get_login_status')}}";
+    var checklists_url = "{{=URL('api', 'get_checklists', user_signature=True)}}";
     var add_memo_url = "{{=URL('api', 'add_memo', user_signature=True)}}";
     var del_memo_url = "{{=URL('api', 'del_memo', user_signature=True)}}";
     var edit_memo_url = "{{=URL('api', 'edit_memo', user_signature=True)}}";
     var query_japan_post_url = "{{=URL('api', 'query_Japan_Post')}}";
     var check_JP_url = "{{=URL('api', 'check_JP')}}";
     var check_USPS_url = "{{=URL('api', 'check_USPS')}}";
-
 </script>
 {{end}}
 
@@ -21,10 +21,11 @@
     
     
     <div v-if="!logged_in">
-      Please log in to create tracking entries.
+      <h1>Japan Post Tracker</h1>
+      <h4>track all your packages coming from Japan Post Service to the US</h4>
+      <p>Please log in to create tracking entries.</p>
     </div>
     <div v-else>
-      
       
       <!-- Form to add memos -->
       <div v-if="is_adding_memo" id="add_memo_div">
@@ -55,10 +56,10 @@
                 v-bind:class="{'disabled': !logged_in}">
           <i class="fa fa-plus"></i> Add Tracking Entry
         </button>
-        <button v-if="is_adding_memo" class="btn red" v-on:click="add_memo()">
+        <button v-if="is_adding_memo" class="btn orange" v-on:click="add_memo()">
           <i class="fa fa-plus"></i> Add
         </button>
-        <button v-if="is_adding_memo" class="btn " v-on:click="cancel_add_memo()">
+        <button v-if="is_adding_memo" class="btn orange" v-on:click="cancel_add_memo()">
           <i class="fa fa-times"></i> Cancel
         </button>
       </div>

@@ -17,6 +17,15 @@ var app = function() {
 
     //self.insertion_id = null; // Initialization.
 
+    self.get_login_status = function() {
+        $.getJSON(login_status_url, function (data) {
+            self.vue.logged_in = data.logged_in;
+            if (self.vue.logged_in === true) {
+                self.get_checklists();
+            }
+        })
+    }
+
     self.get_checklists = function () {
         $.getJSON(checklists_url, function (data) {
             self.vue.checklists = data.checklists;
@@ -29,6 +38,7 @@ var app = function() {
     self.add_memo_button = function () {
         // The button to add a memo has been pressed.
         self.vue.is_adding_memo = true;
+        self.vue.an_entry_is_being_edited = true;
     };
     self.add_memo = function () {
         // Submits the memo info.
@@ -39,6 +49,7 @@ var app = function() {
             },
             function (data) {
                 self.vue.is_adding_memo = false;
+                self.vue.an_entry_is_being_edited = false;
                 self.get_checklists(); //still 1-page app
                 enumerate(self.vue.checklists);
                 self.vue.form_title = "";
@@ -47,7 +58,7 @@ var app = function() {
     };
     self.cancel_add_memo = function() {
         self.vue.is_adding_memo = false;
-        //$.post(cleanup_url); // Cleans up any incomplete uploads.
+        self.vue.an_entry_is_being_edited = false;
     };
 
     self.delete_memo = function(memo_idx) {
@@ -139,7 +150,8 @@ var app = function() {
             an_entry_is_being_edited: false
         },
         methods: {
-            get_checklists: self.get_checklists(),
+            get_login_status: self.get_login_status,
+            get_checklists: self.get_checklists,
             add_memo_button: self.add_memo_button,
             add_memo: self.add_memo,
             cancel_add_memo: self.cancel_add_memo,
@@ -147,6 +159,7 @@ var app = function() {
             start_edit_memo: self.start_edit_memo,
             cancel_edit_memo: self.cancel_edit_memo,
             save_edit_memo: self.save_edit_memo,
+
             get_tracking_progress_JP: self.get_tracking_progress_JP,
             check_JP: self.check_JP,
             check_USPS: self.check_USPS,
@@ -154,7 +167,8 @@ var app = function() {
     });
 
 
-    //self.get_checklists(); //I will call this in index.html
+
+    self.get_login_status();
     $("#vue-div").show();
 
     return self;
